@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :provider, :uid
 
   def self.find_for_twitter_oauth(auth)
-    user = User.where(provider: auth.provider, uid: auth.uid).first
+    user = User.where(provider: auth[:provider], uid: auth[:uid]).first
     unless user
-      user = User.create(provider: auth.provider, uid: auth.uid)
+      user = User.create(provider: auth[:provider], uid: auth[:uid])
     end
     user
   end
