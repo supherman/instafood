@@ -19,6 +19,7 @@ group :production do
   gem 'pg'
 end
 
+gem 'acts_as_shopping_cart'
 gem 'devise'
 gem 'haml-rails'
 gem 'jquery-rails'

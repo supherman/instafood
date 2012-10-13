@@ -4,8 +4,7 @@ class MenuItem < ActiveRecord::Base
 
   belongs_to :category
 
-  has_many :order_details
-  has_many :orders, through: :order_details
+  acts_as_shopping_cart_item_for :order
 
   validates :name, presence: true
   validates :description, presence: true
