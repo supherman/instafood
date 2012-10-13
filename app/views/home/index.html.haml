@@ -1,2 +1,62 @@
-%h1
-  Bienvenido a instafood
+%header
+	.wrapper
+		%h1
+			= link_to 'Las Fabulosas Papas powered by Instafood', '#'
+		%nav
+			%ul
+				%li
+					= link_to 'Inicio', '#myModal', data:{toggle: 'modal'}
+				%li
+					= link_to 'Ver Menú', '#'
+				%li
+					= link_to 'Cobertura', '#'
+				%li
+					= link_to 'Cómo Funciona', '#'
+				%li
+					= link_to 'FAQ', '#'
+				%li
+					= link_to 'Términos y Condiciones', '#'
+		.status
+			STATUS
+			%span Recibiendo Pedidos
+		.badge
+			Instafood
+#content
+	.wrapper
+		%section#slide
+			= image_tag('slid.jpg')
+			= image_tag('float.png', :class => 'btn-float')
+			= link_to 'PEDIR AHORA', '#', :class => 'btn-wide'
+		%section#combos
+			.col4
+				= image_tag('p1.jpg')
+				= link_to 'PEDIR AHORA', '#', :class => 'btn-anadir'
+			.col4
+				= image_tag('p2.jpg')
+				= link_to 'PEDIR AHORA', '#', :class => 'btn-anadir'
+			.col4
+				= image_tag('p3.jpg')
+				= link_to 'PEDIR AHORA', '#', :class => 'btn-anadir'
+			.col4
+				= image_tag('p4.jpg')
+				= link_to 'PEDIR AHORA', '#', :class => 'btn-anadir'
+		%section#recent
+			.col2.colored
+				%h1.envolved Últimas Órdenes Entregadas
+				%ul#eda
+					%li Orden 3430 11:05 hrs. Zona Centro
+					%li Orden 3430 11:05 hrs. Zona Centro
+					%li Orden 3430 11:05 hrs. Zona Centro
+					%li Orden 3430 11:05 hrs. Zona Centro
+					%li Orden 3430 11:05 hrs. Zona Centro
+			.col2
+				%iframe{:frameborder => "0", :height => "350", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps/ms?msa=0&msid=203142175459903253611.0004cbf43a9c5f91bb4f6&ie=UTF8&t=m&ll=19.251191,-103.719177&spn=0.056722,0.072956&z=13&output=embed", :width => "425"}
+#myModal.modal.hide.fade
+	.modal-header
+		%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+		%h3 Modal header
+	.modal-body
+		%p One fine body
+	.modal-footer
+		%a.btn{:href => "#"} Close
+		%a.btn.btn-primary{:href => "#"} Save changes
