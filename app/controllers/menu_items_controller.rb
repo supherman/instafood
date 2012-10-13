@@ -11,7 +11,7 @@ class MenuItemsController < ApplicationController
 
   def create
     @menu_item = @order.shopping_cart_items.create(params[:menu_item])
-    respond_with @menu_item, location: order_menu_item_path(@menu_item)
+    respond_with @menu_item, location: order_menu_item_url(@menu_item)
   end
 
   def show
@@ -27,10 +27,6 @@ class MenuItemsController < ApplicationController
   end
 
   private
-
-  def find_order
-    @order = current_user.last_active_order
-  end
 
   def find_menu_item
     @menu_items = @order.shopping_cart_items

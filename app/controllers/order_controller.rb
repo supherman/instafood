@@ -1,9 +1,10 @@
 class OrderController < ApplicationController
+  before_filter :find_order
 
   respond_to :json
 
   def show
-    respond_with current_user.last_active_order
+    respond_with @order
   end
 
   def create
@@ -11,6 +12,6 @@ class OrderController < ApplicationController
   end
 
   def destroy
-    respond_with current_user.last_active_order.try(:destroy)
+    respond_with @order.try(:destroy)
   end
 end
