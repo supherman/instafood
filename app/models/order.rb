@@ -8,7 +8,7 @@ class Order < ActiveRecord::Base
 
   before_create :create_signature
 
-  def self.last_active
+  def self.last_active_order
     order(:created_at).last
   end
 

@@ -3,7 +3,7 @@ class OrderController < ApplicationController
   respond_to :json
 
   def show
-    respond_with current_user.orders.last_active
+    respond_with current_user.last_active_order
   end
 
   def create
@@ -11,6 +11,6 @@ class OrderController < ApplicationController
   end
 
   def destroy
-    respond_with current_user.orders.last_active.try(:destroy)
+    respond_with current_user.last_active_order.try(:destroy)
   end
 end

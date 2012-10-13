@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   has_many :orders
 
+  delegate :last_active_order, to: :orders, allow_nil: true
+
   def self.find_for_twitter_oauth(auth)
     user = User.where(provider: auth[:provider], uid: auth[:uid]).first
     unless user
