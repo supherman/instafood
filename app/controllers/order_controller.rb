@@ -4,6 +4,7 @@ class OrderController < ApplicationController
   respond_to :json
 
   def show
+    @order = current_user.orders.create unless @order
     respond_with @order
   end
 
