@@ -11,6 +11,8 @@ Instafood::Application.routes.draw do
   resource :menu, only: [:show], controller: :menu
   resource :checkout, only: [:show], controller: :checkout
 
+  resource :auth_check, only: [:show], controller: :auth_check
+
   devise_for :users, controllers: { omniauth_callbacks:  'users/omniauth_callbacks' }
 
   devise_scope :user do
