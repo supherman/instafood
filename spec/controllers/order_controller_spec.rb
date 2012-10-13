@@ -17,14 +17,14 @@ describe OrderController do
     end
   end
 
-  describe "GET 'create'" do
+  describe "POST 'create'" do
     it 'returns http success' do
       post :create, format: :json
       response.should be_success
     end
   end
 
-  describe "GET 'destroy'" do
+  describe "DELETE 'destroy'" do
     it 'returns http success' do
       delete :destroy, format: :json
       response.should be_success

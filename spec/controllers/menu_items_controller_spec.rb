@@ -16,12 +16,12 @@ describe MenuItemsController do
 
   describe "GET 'index'" do
     it 'returns http success' do
-      get :show, format: :json
+      get :index, format: :json
       response.should be_success
     end
   end
 
-  describe "GET 'create'" do
+  describe "POST 'create'" do
     before do
       order.stub shopping_cart_items: menu_items
     end
@@ -43,7 +43,7 @@ describe MenuItemsController do
     end
   end
 
-  describe "GET 'destroy'" do
+  describe "DELETE 'destroy'" do
     before do
       order.stub shopping_cart_items: menu_items
     end
@@ -54,7 +54,7 @@ describe MenuItemsController do
     end
   end
 
-  describe "GET 'update'" do
+  describe "PUT 'update'" do
     before do
       order.stub shopping_cart_items: menu_items
     end
