@@ -5,6 +5,8 @@ gem 'rails', '3.2.8'
 group :assets do
   gem 'bootstrap-sass'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'haml_assets'
+  gem 'handlebars_assets'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
 end
@@ -27,3 +29,4 @@ gem 'jquery-rails'
 gem 'oauth2'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'rails-backbone'
