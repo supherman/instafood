@@ -3,7 +3,7 @@ When /^I go to the landing page$/ do
 end
 
 Then /^I should be on the landing page$/ do
-  page.should have_content('Bienvenido a instafood')
+  page.has_css?('#slide').should be_true
 end
 
 Then /^I go to the sign in page$/ do
