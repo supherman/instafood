@@ -11,21 +11,21 @@ describe OrderController do
   end
 
   describe "GET 'show'" do
-    it "returns http success" do
+    it 'returns http success' do
       get :show, format: :json
       response.should be_success
     end
   end
 
   describe "GET 'create'" do
-    it "returns http success" do
+    it 'returns http success' do
       post :create, format: :json
       response.should be_success
     end
   end
 
   describe "GET 'destroy'" do
-    it "returns http success" do
+    it 'returns http success' do
       delete :destroy, format: :json
       response.should be_success
     end
