@@ -19,5 +19,9 @@ group :production do
   gem 'pg'
 end
 
+gem 'devise'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'oauth2'
+gem 'omniauth'
+gem 'omniauth-twitter'

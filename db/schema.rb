@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121013011846) do
+ActiveRecord::Schema.define(:version => 20121013012929) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -45,5 +45,20 @@ ActiveRecord::Schema.define(:version => 20121013011846) do
     t.datetime "updated_at",   :null => false
     t.float    "total_price"
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.integer  "sign_in_count",      :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end
