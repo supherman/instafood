@@ -17,7 +17,19 @@
 				%a{:href => "#"}
 					= image_tag('p1.jpg')
 					= image_tag('zoom.png')
-				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				= link_to 'Añadir', '#modal-login', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				%span.costo $90, $40, $100
+			.col4
+				%a{:href => "#"}
+					= image_tag('p1.jpg')
+					= image_tag('zoom.png')
+				= link_to 'Añadir', '#modal-base', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				%span.costo $90, $40, $100
+			.col4
+				%a{:href => "#"}
+					= image_tag('p1.jpg')
+					= image_tag('zoom.png')
+				= link_to 'Añadir', '#modal-base', :class => 'btn-pequeno', data:{toggle: 'modal'}
 				%span.costo $90, $40, $100
 			.col4
 				%a{:href => "#"}
@@ -37,23 +49,33 @@
 					= image_tag('zoom.png')
 				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
 				%span.costo $90, $40, $100
-			.col4
-				%a{:href => "#"}
-					= image_tag('p1.jpg')
-					= image_tag('zoom.png')
-				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
-				%span.costo $90, $40, $100
-			.col4
-				%a{:href => "#"}
-					= image_tag('p1.jpg')
-					= image_tag('zoom.png')
-				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
-				%span.costo $90, $40, $100
-#myModal.modal.hide.fade
+#modal-login.modal.hide.fade
 	.modal-header
 		%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-		%h3 Modal h
+		%h3 Accede para hacer tu pedido
 	.modal-body
-		%p One fine body…
-	.modal-footer
-		%a.btn.btn-primary{:href => "#"} Save changes
+		%a{:href => "#"}
+			= image_tag('tw.png', :class => 'btn-tw')
+		%p No te tomará más de 10 segundos
+
+#modal-base.modal.hide.fade
+	= form_tag do
+		.modal-header
+			%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+			%h3 Papatías
+		.modal-body
+			= image_tag('papa.png', :class => 'modal-photo')
+			.modal-right
+				.input-line
+					= check_box_tag 'eda'
+					= label_tag(:eda, 'Orden Media: $40')
+					= text_field_tag 'eda', '', class: 'input-cant', placeholder: '1'
+				.input-line
+					= check_box_tag 'eda2'
+					= label_tag(:eda2, 'Orden Completa: $60')
+					= text_field_tag 'eda2', '', class: 'input-cant', placeholder: '1'
+				.input-line.loading-row
+					= image_tag('ajax-loader.gif', :class => 'loading')
+					%p Añadiendo a tu orden.
+		.modal-footer
+			%a.btn.btn-primary{:href => "#"} Agregar a mi orden
