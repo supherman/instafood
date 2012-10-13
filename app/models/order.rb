@@ -4,7 +4,16 @@ class Order < ActiveRecord::Base
 
   acts_as_shopping_cart_using :menu_item
 
-  validates :status, presence: true
-  validates :signature, presence: true
+  belongs_to :user
+
+  before_create :create_signature
+
+  def self.last_active
+    order(:created_at).last
+  end
+
+  def create_signature
+    self.signature = SecureRandom.base64(32)
+  end
 
 end
