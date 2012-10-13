@@ -1,2 +1,59 @@
-%h1 Menu#index
-%p Find me in app/views/menu/index.html.haml
+#content
+	.wrapper
+		%section#menu
+			%nav#menu-cat
+				%ul
+					%li
+						= link_to 'Papás', '#'
+					%li
+						= link_to 'Ensaladas', '#'
+					%li
+						= link_to 'Otros Alimentos', '#'
+					%li
+						= link_to 'Bebidas', '#'
+					%li
+						= link_to 'Combos', '#'	
+			.col4
+				%a{:href => "#"}
+					= image_tag('p1.jpg')
+					= image_tag('zoom.png')
+				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				%span.costo $90, $40, $100
+			.col4
+				%a{:href => "#"}
+					= image_tag('p1.jpg')
+					= image_tag('zoom.png')
+				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				%span.costo $90, $40, $100
+			.col4
+				%a{:href => "#"}
+					= image_tag('p1.jpg')
+					= image_tag('zoom.png')
+				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				%span.costo $90, $40, $100
+			.col4
+				%a{:href => "#"}
+					= image_tag('p1.jpg')
+					= image_tag('zoom.png')
+				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				%span.costo $90, $40, $100
+			.col4
+				%a{:href => "#"}
+					= image_tag('p1.jpg')
+					= image_tag('zoom.png')
+				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				%span.costo $90, $40, $100
+			.col4
+				%a{:href => "#"}
+					= image_tag('p1.jpg')
+					= image_tag('zoom.png')
+				= link_to 'Añadir', '#myModal', :class => 'btn-pequeno', data:{toggle: 'modal'}
+				%span.costo $90, $40, $100
+#myModal.modal.hide.fade
+	.modal-header
+		%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+		%h3 Modal h
+	.modal-body
+		%p One fine body…
+	.modal-footer
+		%a.btn.btn-primary{:href => "#"} Save changes
