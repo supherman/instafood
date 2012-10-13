@@ -8,7 +8,5 @@ class MenuItem < ActiveRecord::Base
   acts_as_shopping_cart_item_for :order
 
   validates :name, presence: true
-  validates :description, presence: true
-  validates :price, presence: true
 
 end
