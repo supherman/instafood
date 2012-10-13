@@ -16,7 +16,7 @@ describe MenuItemsController do
 
   describe "GET 'index'" do
     it 'returns http success' do
-      get :index, format: :json
+      get :show, format: :json
       response.should be_success
     end
   end
