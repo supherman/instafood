@@ -30,6 +30,7 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
       @createOrder(@model.get('id'), 'MenuItem', 1, @model.get('price'))
     else
       @createOrder $(variation).data('id'), 'Variation', $(variation).val(), $(variation).data('price') for variation in @selectedVariations()
+    Instafood.order.trigger 'item_added'
     @$el.modal('hide')
 
   createOrder: (item_id, item_type, quantity, price)->

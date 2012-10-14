@@ -5,7 +5,7 @@ class OrderController < ApplicationController
 
   def show
     @order = current_user.orders.create unless @order
-    respond_with @order
+    respond_with @order, include: :shopping_cart_items
   end
 
   def create
