@@ -9,4 +9,5 @@ class Instafood.MenuRouter extends Backbone.Router
       success: ->
         console.log 'add to order'
       error: ->
+        $('#modal-login').modal()
         console.log 'sign in'
