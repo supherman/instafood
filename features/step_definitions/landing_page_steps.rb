@@ -25,3 +25,12 @@ When /^I add a menu item to my order$/ do
     find(:css, '.btn-anadir').click
   end
 end
+
+When /^I should see the menu item modal$/ do
+  sleep 2
+  page.evaluate_script("$('#modal-base').is(':visible')").should == true
+end
+
+Given /^I am logged in$/ do
+  visit user_omniauth_callback_path(:twitter)
+end

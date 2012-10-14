@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
     @order = current_user.last_active_order
   end
 
+  def after_sign_in_path_for(resource)
+    menu_path
+  end
+
 end

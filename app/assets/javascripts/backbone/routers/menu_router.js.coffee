@@ -7,7 +7,6 @@ class Instafood.MenuRouter extends Backbone.Router
       url: '/auth_check'
       type: 'GET'
       success: ->
-        console.log 'add to order'
+        $('#modal-base').modal()
       error: ->
         $('#modal-login').modal()
-        console.log 'sign in'
