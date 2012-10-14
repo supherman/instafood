@@ -12,3 +12,16 @@ Then /^I should be on the menu page$/ do
   URI.parse(current_url).path.should == menu_path
 end
 
+Then /^I should see the twitter sign in modal$/ do
+  page.should have_content('Ingresa con Twitter')
+end
+
+Given /^There are menu items$/ do
+  MenuItem.create name: 'foo'
+end
+
+When /^I add a menu item to my order$/ do
+  within '#combos' do
+    find(:css, '.btn-anadir').click
+  end
+end

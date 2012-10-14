@@ -1,4 +1,4 @@
 .col4
   = image_tag(menu_item.photo.url)
-  = link_to 'PEDIR AHORA', '#', class: 'btn-anadir', data: { menu_item_id: menu_item.id }
+  = link_to 'PEDIR AHORA', menu_path, class: 'btn-anadir', data: { menu_item_id: menu_item.id }
 
