@@ -27,7 +27,7 @@ When /^I add a menu item to my order$/ do
 end
 
 When /^I should see the menu item modal$/ do
-  sleep 2
+  sleep 1
   page.evaluate_script("$('#modal-base').is(':visible')").should == true
 end
 
