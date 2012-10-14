@@ -5,10 +5,10 @@ class MenuItem < ActiveRecord::Base
   belongs_to :category
   has_many :variations
 
+  mount_uploader :photo, MenuItemPhotoUploader
+
   acts_as_shopping_cart_item_for :order
 
   validates :name, presence: true
-  validates :description, presence: true
-  validates :price, presence: true
 
 end

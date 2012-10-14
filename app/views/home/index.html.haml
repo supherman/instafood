@@ -5,22 +5,7 @@
       = image_tag('float.png', class: 'img-float')
       = link_to 'PEDIR AHORA', menu_path, class: 'btn-wide'
     %section#combos.listado
-      .col4
-        %a{:href => "#"}
-          = image_tag('p1.jpg')
-        = link_to 'PEDIR AHORA', '#', class: 'btn-anadir'
-      .col4
-        %a{:href => "#"}
-          = image_tag('p1.jpg')
-        = link_to 'PEDIR AHORA', '#', class: 'btn-anadir'
-      .col4
-        %a{:href => "#"}
-          = image_tag('p1.jpg')
-        = link_to 'PEDIR AHORA', '#', class: 'btn-anadir'
-      .col4
-        %a{:href => "#"}
-          = image_tag('p1.jpg')
-        = link_to 'PEDIR AHORA', '#', class: 'btn-anadir'
+      = render @menu_items
     %section#recent
       .col2.colored
         %h1.envolved Últimas Órdenes Entregadas

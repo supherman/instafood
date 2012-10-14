@@ -23,7 +23,9 @@ group :production do
 end
 
 gem 'acts_as_shopping_cart'
+gem 'carrierwave'
 gem 'devise'
+gem 'fog'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'oauth2'
