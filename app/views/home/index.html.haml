@@ -1,21 +1,25 @@
 #content
   .wrapper
     %section#slide
-      = image_tag('slid.jpg')
-      = image_tag('float.png', class: 'btn-float')
+      = image_tag('slid.jpg', class: 'slid')
+      = image_tag('float.png', class: 'img-float')
       = link_to 'PEDIR AHORA', menu_path, class: 'btn-wide'
-    %section#combos
+    %section#combos.listado
       .col4
-        = image_tag('p1.jpg')
+        %a{:href => "#"}
+          = image_tag('p1.jpg')
         = link_to 'PEDIR AHORA', '#', class: 'btn-anadir'
       .col4
-        = image_tag('p2.jpg')
-        = link_to 'PEDIR AHORA', '#{}', class: 'btn-anadir'
-      .col4
-        = image_tag('p3.jpg')
+        %a{:href => "#"}
+          = image_tag('p1.jpg')
         = link_to 'PEDIR AHORA', '#', class: 'btn-anadir'
       .col4
-        = image_tag('p4.jpg')
+        %a{:href => "#"}
+          = image_tag('p1.jpg')
+        = link_to 'PEDIR AHORA', '#', class: 'btn-anadir'
+      .col4
+        %a{:href => "#"}
+          = image_tag('p1.jpg')
         = link_to 'PEDIR AHORA', '#', class: 'btn-anadir'
     %section#recent
       .col2.colored
