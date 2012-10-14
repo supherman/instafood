@@ -280,6 +280,10 @@ a:hover {
 .modal-header {
   padding: 9px 15px;
   border-bottom: 1px solid #eee;
+  &.prod {
+    background:#017234;
+    color:#fff;
+  }
 }
 .modal-header .close {
   margin-top: 2px;
@@ -288,9 +292,16 @@ a:hover {
   margin: 0;
   line-height: 30px;
   font-family:'Open Sans';
-  color:green;
-  font-size:25px;
+  color:#777;
+  letter-spacing: -0.05em;
+  font-size:17px;
   text-shadow: 0px 0px 10px #ccc;
+  font-weight: 400;
+  &.meal-title {
+  font-weight: 700;
+  font-size:19px;
+  color:#fff;
+  }
 }
 .modal-body {
   overflow-y: auto;
@@ -667,8 +678,8 @@ a:hover {
   line-height: 20px;
   color: #000000;
   text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .close:hover {
   color: #000000;

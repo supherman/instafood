@@ -22,4 +22,8 @@
       %span Recibiendo Pedidos
     .badge
       = link_to 'Instafood', '#'
-    = render 'layouts/cart'
+    .cart
+      3 items en tu pedido.
+      %span $200
+      = link_to 'Revisar mi pedido', '#'
+	= render 'layouts/cart'

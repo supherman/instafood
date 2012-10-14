@@ -1,6 +1,6 @@
-.modal-header
+.modal-header.prod
   %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-  %h3 {{ this.name }}
+  %h3.meal-title {{ this.name }}
 
 .modal-body
   = image_tag('papa.png', :class => 'modal-photo')
@@ -8,7 +8,9 @@
   .modal-right#quantity
     .input-line
       = label_tag(:eda2, 'Cantidad')
-      = text_field_tag 'eda2', '', class: 'input-cant', placeholder: '1'
+      = text_field_tag 'eda2', '', class: 'input-cant', value: '1'
 
 .modal-footer
+  .costo-cal
+    Son $400 + a tu orden
   %a.btn.btn-primary{:href => "#", :class => "btn-anadir disabled"}

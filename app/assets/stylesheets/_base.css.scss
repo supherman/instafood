@@ -370,7 +370,7 @@ article.col4 {
 }
 
 .costo {
-  background: red;
+  background: #dc7f03;
   color:#fff;
   font-family: 'open sans', arial, sans-serif;
   font-size: 16px;
@@ -450,17 +450,29 @@ h2.envolved {
     bottom: auto;
     text-indent:-9999px;
   }
+  .costo-cal {
+    float:left;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+    background:#dc7f03;
+    padding:5px 10px;
+    color:#fff;
+    border-radius: 19px;
+    font-size:15px;
+    margin-top:10px;
+  }
 }
 
 .input-line {
   padding:3px 0;
-  border-bottom:1px solid #ccc;
+  border-bottom:1px dashed #ccc;
+  font-size:13px;
 
 }
 
 label {
-  font-size:20px;
-  font-weight:700;
+  font-size:14px;
+  font-weight:400;
   line-height:36px;
 }
 
@@ -469,8 +481,8 @@ input {
 }
 
 input[type="checkbox"] {
-  margin-top:12px;
-  margin-right:5px;
+  margin-top:14px;
+  margin-right:2px;
 }
 
 input[type="checkbox"] + label {
@@ -485,32 +497,32 @@ input[type="text"] {
   -moz-box-shadow:inset 0px 0px 5px #666;
   -webkit-box-shadow:inset 0px 0px 5px #666;
   box-shadow:inset 0px 0px 5px #666;
-  padding: 7px;
-  font-size:16px;color:#000;
+  padding: 5px;
+  font-size:12px;
+  color:#000;
   border-radius: 5px;
   border: 1px solid #adc8b1;
 }
 
 input[type="text"].input-cant {
   width:30px;
-  margin-left:10px;
+  margin-left:5px;
+  vertical-align: middle;
+  text-align:center;
 }
 
-input[type="checkbox"] + label + input[type="text"].input-cant {
-  color:#999;
-  background:#eee;
-  display:none;
+.modal-photo {
+  box-shadow:0px 0px 10px #ccc;
+  border:1px solid #fff;
+  border-radius: 4px;
+  float:left;
+  margin-right:15px;
+  max-width:250px;
 }
 
-input[type="checkbox"]:checked + label + input[type="text"].input-cant {
-  color:#000;
-  border-color:green;
-  color:#000;
-  display:inline-block;
+.btn-tw {
+  border-radius: 7px;
 }
-
-.modal-photo {}
-
 
 
 /**/
