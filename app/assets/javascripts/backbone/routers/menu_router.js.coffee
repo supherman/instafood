@@ -10,5 +10,8 @@ class Instafood.MenuRouter extends Backbone.Router
         menu_item = new Instafood.MenuItem({ id: id })
         menu_item.fetch()
         new Instafood.MenuItemView({ model: menu_item })
+        if Instafood.order is undefined
+          Instafood.order = new Instafood.Order()
+          Instafood.order.fetch()
       error: ->
         $('#modal-login').modal()

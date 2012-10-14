@@ -21,3 +21,4 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
 
   addToOrder: (e)->
     e.preventDefault()
+
