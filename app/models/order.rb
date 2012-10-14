@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
   before_create :create_signature
 
   def self.last_active_order
-    order(:created_at).last
+    with_status(:pending).order(:created_at).last
   end
 
   def create_signature
@@ -18,6 +18,20 @@ class Order < ActiveRecord::Base
 
   def taxes
     0
+  end
+
+  state_machine :status, :initial => :pending do
+    event :request do
+      transition pending: :in_progress
+    end
+
+    event :finish do
+      transition in_progress: :finished
+    end
+
+    event :deliver do
+      transition finished: :delivered
+    end
   end
 
 end
