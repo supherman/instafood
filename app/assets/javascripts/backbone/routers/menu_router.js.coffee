@@ -1,12 +1,14 @@
 class Instafood.MenuRouter extends Backbone.Router
   routes:
-    ':id/add' : 'addToOrder'
+    ':id' : 'addToOrder'
 
   addToOrder: (id)->
     $.ajax
       url: '/auth_check'
       type: 'GET'
       success: ->
-        $('#modal-base').modal()
+        menu_item = new Instafood.MenuItem({ id: id })
+        menu_item.fetch()
+        new Instafood.MenuItemView({ model: menu_item })
       error: ->
         $('#modal-login').modal()

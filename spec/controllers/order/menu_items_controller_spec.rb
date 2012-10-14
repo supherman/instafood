@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe MenuItemsController do
+describe Order::MenuItemsController do
   let(:order) { stub_model Order }
   let(:user) do
     stub_model User, last_active_order: order

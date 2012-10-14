@@ -3,7 +3,7 @@ Instafood::Application.routes.draw do
   get "checkout/show"
 
   resource :order, only: [:show, :create, :destroy], controller: :order, format: :json do
-    resources :menu_items, only: [:show, :create, :destroy, :update, :index], format: :json
+    resources :menu_items, only: [:show, :create, :destroy, :update, :index], format: :json, controller: 'order/menu_items'
   end
 
   resources :payments, only: [:create], format: :json
@@ -12,6 +12,8 @@ Instafood::Application.routes.draw do
   resource :checkout, only: [:show], controller: :checkout
 
   resource :auth_check, only: [:show], controller: :auth_check
+
+  resources :menu_items, except: [:edit, :new]
 
   devise_for :users, controllers: { omniauth_callbacks:  'users/omniauth_callbacks' }
 

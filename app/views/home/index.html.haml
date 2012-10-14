@@ -27,4 +27,6 @@
         = render 'map' unless Rails.env.test?
 
 :javascript
-  new Instafood.LandingPageView()
+  $(function(){
+    new Instafood.LandingPageView()
+  });

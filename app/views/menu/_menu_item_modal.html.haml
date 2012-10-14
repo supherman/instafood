@@ -1,21 +1,2 @@
 #modal-base.modal.hide.fade
-  = form_tag do
-    .modal-header
-      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-      %h3 Papatías
-    .modal-body
-      = image_tag('papa.png', :class => 'modal-photo')
-      .modal-right
-        .input-line
-          = check_box_tag 'eda'
-          = label_tag(:eda, 'Orden Media: $40')
-          = text_field_tag 'eda', '', class: 'input-cant', placeholder: '1'
-        .input-line
-          = check_box_tag 'eda2'
-          = label_tag(:eda2, 'Orden Completa: $60')
-          = text_field_tag 'eda2', '', class: 'input-cant', placeholder: '1'
-        .input-line.loading-row
-          = image_tag('ajax-loader.gif', :class => 'loading')
-          %p Añadiendo a tu orden.
-    .modal-footer
-      %a.btn.btn-primary{:href => "#", :class => "btn-anadir"}
+

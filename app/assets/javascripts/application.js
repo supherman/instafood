@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require handlebars.runtime
 //= require bootstrap
 //= require underscore
-//= require handlebars.runtime
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
