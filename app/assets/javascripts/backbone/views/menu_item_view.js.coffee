@@ -65,7 +65,6 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
     else if not _.isEmpty(@selectedVariations())
       subTotal = _.reduce @selectedVariations(), ((sum, variation)-> sum + $(variation).data('price') * parseInt($(variation).val())), 0
     @$el.find('.costo-cal').html("Son $#{subTotal} + a tu orden")
-    console.log subTotal
 
   focusQuantityText: (e)->
     $(e.target).select()

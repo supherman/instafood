@@ -1,4 +1,9 @@
 - if user_signed_in?
+  .cart
+    3 items en tu pedido.
+    %br
+    %span.total TOTAL: $200
+    = link_to 'Revisar mi pedido', '#'
   :javascript
     $(function(){
       Instafood.order = new Instafood.Order()
