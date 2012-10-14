@@ -267,6 +267,19 @@ header {
   }
 }
 
+.btn-pagar {
+    text-indent:-9999px;
+    width:321px;
+    display:block;
+    height: 80px;
+    margin:20px auto 0;
+    background:url(/assets/pagar.png);
+      &:hover {
+      -moz-opacity: 0.9;
+      -webkit-opacity: 0.9;
+      opacity: 0.9;
+    }
+}
 .listado {
   text-align:left;
   padding-bottom:30px;
@@ -276,6 +289,8 @@ header {
   width:481px;
   float:left;
   margin-left:15px;
+  &.colored.m {}
+    padding-bottom: 15px;
   &.colored {
     background:#eee;
     margin-left:0;
@@ -287,6 +302,10 @@ header {
       color:#999;
       text-shadow:0px -1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, .6);
       text-transform: uppercase;
+      &.checkout {
+        background: none;
+        padding:13px;
+      }
     }
     ul {
       margin:0;
@@ -297,6 +316,14 @@ header {
         list-style:none;
         padding-left: 31px;
         background: url(/assets/truck.png) no-repeat 3px 1px;
+      }
+      &.checkoutlist li {
+        padding:5px;
+        background: none;
+        a {
+          font-size: 11px;
+          margin-left:10px;
+        }
       }
     }
   }
@@ -493,7 +520,7 @@ input[type="checkbox"]:checked + label {
   color:#000;
 }
 
-input[type="text"] {
+input[type="text"], textarea {
   -moz-box-shadow:inset 0px 0px 5px #666;
   -webkit-box-shadow:inset 0px 0px 5px #666;
   box-shadow:inset 0px 0px 5px #666;
@@ -527,8 +554,10 @@ input[type="text"].input-cant {
 .cart {
   margin-top:10px;
   height:36px;
-  padding-left:60px;
-  background: url(/assets/kart.png) 0px 0px no-repeat;
+  padding:10px 10px 10px 60px;
+  background: url(/assets/kart.png) 5px 11px no-repeat #eee;
+  border-radius:7px;
+  width:200px;
   span {
     font-weight:700;
   }
@@ -536,5 +565,26 @@ input[type="text"].input-cant {
     font-size:11px;
   }
 }
+
+.mini-img {
+  float:left;
+  width: 30px;
+  height:auto; 
+  margin-right:10px;
+  border:1px solid #fff;
+}
+
+.forr label {
+  width: 120px;
+  display:inline-block;
+}
+
+
+
+
+
+
+
+
 
 /**/

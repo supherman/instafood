@@ -1,2 +1,49 @@
-%h1 Checkout#show
-%p Find me in app/views/checkout/show.html.haml
+#content
+  .wrapper
+    %section#recent
+      .col2.colored
+        %h1.envolved.checkout Resumen de tu órden (#32324)
+        %ul.checkoutlist
+          %li 
+            = link_to image_tag('p1.jpg', :class => 'mini-img')
+            2 Papatías Medianas por $90 / 
+            = link_to 'Borrar item', '#'
+          %li 
+            = link_to image_tag('p1.jpg', :class => 'mini-img')
+            1 Patatías Completa por $140 /
+            = link_to 'Borrar item', '#'
+          %li 
+            = link_to image_tag('p1.jpg', :class => 'mini-img')
+            2 Papatías Medianas por $90 / 
+            = link_to 'Borrar item', '#'
+          %li 
+            = link_to image_tag('p1.jpg', :class => 'mini-img')
+            1 Patatías Completa por $140 /
+            = link_to 'Borrar item', '#'
+          %li 
+            = link_to image_tag('p1.jpg', :class => 'mini-img')
+            2 Papatías Medianas por $90 / 
+            = link_to 'Borrar item', '#'
+          %li 
+            = link_to image_tag('p1.jpg', :class => 'mini-img')
+            1 Patatías Completa por $140 /
+            = link_to 'Borrar item', '#'
+
+
+      .col2.forr
+        = form_tag do
+          .input-line
+            = label_tag(:eda, 'Orden a nombre')
+            = text_field_tag 'eda', '', placeholder: ''
+          .input-line
+            = label_tag(:eda2, 'Teléfono')
+            = text_field_tag 'eda2', '', placeholder: ''
+          .input-line
+            = label_tag(:eda2, 'Domicilio')
+            = text_area_tag 'eda2', '', placeholder: ''
+          .input-line
+            = label_tag(:eda2, 'Email')
+            = text_field_tag 'eda2', '', placeholder: ''
+          = link_to 'PEDIR AHORA', menu_path, class: 'btn-pagar'
+
+          

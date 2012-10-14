@@ -9,7 +9,7 @@
       = render @menu_items
 
     %section#recent
-      .col2.colored
+      .col2.colored.m
         %h1.envolved Últimas Órdenes Entregadas
         %ul#eda
           %li Orden #3431 Sep-17 11:05 hrs. / Zona Centro
@@ -24,6 +24,7 @@
           %li Orden #3440 Sep-17 12:45 hrs. / Zona Centro
 
       .col2
+        %h1.envolved Tu posición
         = render 'map' unless Rails.env.test?
 
 :javascript
