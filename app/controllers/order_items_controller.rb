@@ -10,7 +10,8 @@ class OrderItemsController < ApplicationController
   end
 
   def create
-    @order_item = @order.shopping_cart_items.create(params[:order_item])
+    item = params[:item_type].constantize.find(params[:item_id])
+    @order_item = @order.add(item, params[:price], params[:quantity])
     respond_with @order_item, location: order_order_item_url(@order_item)
   end
 
