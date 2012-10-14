@@ -3,7 +3,9 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
 
   events:
     'click .btn-anadir'           : 'addToOrder'
-    'click input[name=variation]' : 'setButtonState'
+    'click input[name=variation]' : 'addVariation'
+    'keyup .input-cant'           : 'calculateSubTotal'
+    'click .input-cant'           : 'focusQuantityText'
 
   template: HandlebarsTemplates['backbone/templates/menu_item']
 
@@ -18,7 +20,10 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
     @$el.html(@template(@model.toJSON()))
     new Instafood.VariationsView({ collection: @model.get('variations') })
     @$el.modal()
-    @activateButton() if _.isEmpty @model.get('variations')
+    if _.isEmpty @model.get('variations')
+      @activateButton()
+      @$el.find('#quantity').show()
+      @$el.find('.costo-cal').html("Son $#{@model.get('price')} + a tu orden")
 
   selectedVariations: ->
     $('input[name=variation]:checked').siblings('input')
@@ -41,14 +46,26 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
       price     : price
     Instafood.order_items.create order_item
 
-  setButtonState: (e)->
+  addVariation: (e)->
     if _.isEmpty(@selectedVariations())
       @deactivateButton()
     else
       @activateButton()
+      @calculateSubTotal()
 
   activateButton: ->
     @$el.find('.btn-anadir').removeClass('disabled')
 
   deactivateButton: ->
     @$el.find('.btn-anadir').addClass('disabled')
+
+  calculateSubTotal: ->
+    if _.isEmpty @model.get('variations')
+      subTotal = @model.get('price') * parseInt($('#quantity .input-cant').val())
+    else if not _.isEmpty(@selectedVariations())
+      subTotal = _.reduce @selectedVariations(), ((sum, variation)-> sum + $(variation).data('price') * parseInt($(variation).val())), 0
+    @$el.find('.costo-cal').html("Son $#{subTotal} + a tu orden")
+    console.log subTotal
+
+  focusQuantityText: (e)->
+    $(e.target).select()

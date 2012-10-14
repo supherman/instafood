@@ -5,12 +5,12 @@
 .modal-body
   = image_tag('papa.png', :class => 'modal-photo')
   .modal-right#variations
-  .modal-right#quantity
+  .modal-right#quantity.hide
     .input-line
       = label_tag(:eda2, 'Cantidad')
-      = text_field_tag 'eda2', '', class: 'input-cant', value: '1'
+      = text_field_tag 'eda2', 1, class: 'input-cant'
 
 .modal-footer
   .costo-cal
-    Son $400 + a tu orden
+    Son $0 + a tu orden
   %a.btn.btn-primary{:href => "#", :class => "btn-anadir disabled"}
