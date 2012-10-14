@@ -12,6 +12,7 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
 
   render: ->
     @$el.html(@template(@model.toJSON()))
+    new Instafood.VariationsView({ collection: @model.get('variations') })
     @$el.modal()
 
   closeModal: (e)->

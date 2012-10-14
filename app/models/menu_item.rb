@@ -11,4 +11,7 @@ class MenuItem < ActiveRecord::Base
 
   validates :name, presence: true
 
+  def variations_prices
+    variations.pluck(:price)
+  end
 end

@@ -2,5 +2,5 @@
   %a.ablock{ href: "##{menu_item.id}" }
     = image_tag('p1.jpg', class: 'main-pic')
     = image_tag('zoom.png', class: 'zoom-img')
-  %span.costo $90, $40, $100
+  %span.costo= variations_prices(menu_item.variations_prices)
   = link_to 'Añadir', "##{menu_item.id}", class: 'btn-plus'
