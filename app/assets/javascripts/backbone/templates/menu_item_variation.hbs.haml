@@ -1,4 +1,4 @@
 .input-line
   = check_box_tag 'variation', 1, false, id: 'variation_{{ this.id }}'
   = label_tag(:variation, '{{ this.name }}: ${{ this.price }}', for: 'variation_{{ this.id }}')
-  = text_field_tag 'eda2', '', class: 'input-cant', placeholder: '1'
+  = text_field_tag 'eda2', '1', class: 'input-cant', placeholder: '1', data: { id: '{{ this.id }}', price: '{{ this.price }}' }

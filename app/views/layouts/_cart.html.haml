@@ -1,0 +1,8 @@
+- if user_signed_in?
+  :javascript
+    $(function(){
+      Instafood.order = new Instafood.Order()
+      Instafood.order.fetch()
+      Instafood.order_items = new Instafood.OrderItems()
+      Instafood.order_items.fetch()
+    })
