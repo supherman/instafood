@@ -13,7 +13,7 @@ Then /^I should be on the menu page$/ do
 end
 
 Then /^I should see the twitter sign in modal$/ do
-  page.should have_content('Ingresa con Twitter')
+  page.should have_content('Accede para hacer tu pedido')
 end
 
 Given /^There are menu items$/ do
