@@ -134,6 +134,16 @@ body {
   position: relative;
 }
 
+section {
+  margin-bottom:30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight:700;
+  font-family: 'Open Sans', Arial;
+  text-shadow:0 1px 0px rgba(255, 255, 255, 0.4);
+}
+
 /* header ****************************************************************/
 
 
@@ -171,7 +181,7 @@ header {
             &:hover {
               color:green;
               text-decoration: none;
-            text-shadow: 0px 1px 0px rgba(255, 255, 255, .6);
+              text-shadow: 0px 1px 0px rgba(255, 255, 255, .6);
             }
           }
         }
@@ -262,6 +272,36 @@ header {
   padding-bottom:30px;
 }
 
+.col2 {
+  width:481px;
+  float:left;
+  margin-left:15px;
+  &.colored {
+    background:#eee;
+    margin-left:0;
+    h1 {
+      padding:13px 10px 10px 50px;
+      background: url(/assets/clock.png) no-repeat 6px 5px;
+      font-weight:400;
+      font-size: 20px;
+      color:#999;
+      text-shadow:0px -1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, .6);
+      text-transform: uppercase;
+    }
+    ul {
+      margin:0;
+      padding:10px;
+      li {
+        padding:5px;
+        border-bottom: 1px solid #ccc;
+        list-style:none;
+        padding-left: 31px;
+        background: url(/assets/truck.png) no-repeat 3px 1px;
+      }
+    }
+  }
+}
+
 .col4 {
   width:231px;
   display:inline-block;
@@ -286,18 +326,131 @@ header {
   }
 }
 
+.btn-plus {
+  position: absolute;
+  bottom: -5px;
+  left:0;
+  text-indent:-9999px;
+  width:57px;
+  display:block;
+  height: 49px;
+  background:url(/assets/plus.png);
+  &:hover {
+    -moz-opacity: 0.9;
+    -webkit-opacity: 0.9;
+    opacity: 0.9;
+  }
+}
 
+#recent {
+  padding-bottom:50px;
+  overflow:hidden;
+}
 
+.zoom-img{
+  position: absolute;
+  top: 160px;
+  right: 10px;
+}
 
+article.col4 {
+  @extend .flaoted-group;
+  margin:10px 5px;
+  .man-pic {
+    width:233px;
+    height:198px;
+  }
+}
 
+.ablock {
+  height:196px;
+  display:block;
+  margin:0;
+  position: relative;
+}
 
+.costo {
+  background: red;
+  color:#fff;
+  font-family: 'open sans', arial, sans-serif;
+  font-size: 16px;
+  font-weight:700;
+  display:block;
+  text-align:center;
+  padding-left:49px;
+  line-height:39px;
+  width:178px;
+  float:right;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
 
+nav#menu-nav {
+  height: 45px;
+  padding:0;
+  overflow:hidden;
+  margin:0;
+  ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+    font-size: 15px;
+    text-align: center;
+    li {
+      display: inline-block;
+      overflow: hidden;
+      line-height:30px;
+      &.empty {
+        width:240px;
+      }
+      a {
+        float: left;
+        border-radius:7px;
+        padding: 0 13px;
+        color: green;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-weight:700;
+        text-transform: uppercase;
+        &:hover {
+          color:#fff;
+          text-decoration: none;
+          background: #999;
+          text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+}
 
+h2.envolved {
+  padding:13px 10px;
+  text-align:center;
+  margin-left:5px;
+  margin-bottom: 6px;
+  margin-top:10px;
+  width:945px;
+  background: #ccc;
+  font-weight:800;
+  font-size: 20px;
+  color:#999;
+  text-shadow:0px -1px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, .6);
+  text-transform: uppercase;
+  clear:both;
+}
 
-
-
-
-
+.modal-footer {
+  overflow: hidden;
+  a.btn-anadir {
+    position:relative;
+    margin:0;
+    top: auto;
+    left: auto;
+    right:auto;
+    display:inline-block;
+    bottom: auto;
+    text-indent:-9999px;
+  }
+}
 
 
 
