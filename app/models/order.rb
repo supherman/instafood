@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
 
   attr_accessible :signature, :status, :delivered_at
 
-  acts_as_shopping_cart_using :menu_item
+  acts_as_shopping_cart_using :order_item
 
   belongs_to :user
 
@@ -14,6 +14,10 @@ class Order < ActiveRecord::Base
 
   def create_signature
     self.signature = SecureRandom.base64(32)
+  end
+
+  def taxes
+    0
   end
 
 end

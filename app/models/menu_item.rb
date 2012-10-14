@@ -1,17 +1,19 @@
 class MenuItem < ActiveRecord::Base
 
-  attr_accessible :available, :category_id, :description, :name, :price
+  attr_accessible :available, :category_id, :description, :name, :price, :quantity, :item
 
   belongs_to :category
   has_many :variations
 
   mount_uploader :photo, MenuItemPhotoUploader
 
-  acts_as_shopping_cart_item_for :order
-
   validates :name, presence: true
 
   def variations_prices
-    variations.pluck(:price)
+    if variations.any?
+      variations.pluck(:price)
+    else
+      [price]
+    end
   end
 end

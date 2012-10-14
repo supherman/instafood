@@ -2,7 +2,8 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
   el: '#modal-base'
 
   events:
-    'click .close' : 'closeModal'
+    'click .close'      : 'closeModal'
+    'click .btn-anadir' : 'addToOrder'
 
   template: HandlebarsTemplates['backbone/templates/menu_item']
 
@@ -17,3 +18,6 @@ class Instafood.MenuItemView extends Instafood.InstafoodView
 
   closeModal: (e)->
     Instafood.menu_router.navigate('#')
+
+  addToOrder: (e)->
+    e.preventDefault()

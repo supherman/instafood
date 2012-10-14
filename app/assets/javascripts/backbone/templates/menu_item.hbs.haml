@@ -5,6 +5,10 @@
 .modal-body
   = image_tag('papa.png', :class => 'modal-photo')
   .modal-right#variations
+  .modal-right#quantity
+    .input-line
+      = label_tag(:eda2, 'Cantidad')
+      = text_field_tag 'eda2', '', class: 'input-cant', placeholder: '1'
 
 .modal-footer
   %a.btn.btn-primary{:href => "#", :class => "btn-anadir"}
