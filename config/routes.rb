@@ -3,7 +3,7 @@ Instafood::Application.routes.draw do
   get "checkout/show"
 
   resource :order, only: [:show, :create, :destroy], controller: :order, format: :json do
-    resources :menu_items, only: [:show, :create, :destroy, :update, :index], format: :json, controller: 'order/menu_items'
+    resources :order_items, only: [:show, :create, :destroy, :update, :index], format: :json
   end
 
   resources :payments, only: [:create], format: :json
