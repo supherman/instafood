@@ -11,7 +11,7 @@ Feature: Landing Page
 
   @javascript
   Scenario: Add a menu item without login
-    Given There are menu items
+    Given There are a menu item
       And I am on the landing page
      When I add a menu item to my order
      Then I should be on the menu page
@@ -20,7 +20,7 @@ Feature: Landing Page
   @javascript @omniauth
   Scenario: Add a menu item with login
     Given I am logged in
-      And There are menu items
+      And There are a menu item
       And I am on the landing page
      When I add a menu item to my order
      Then I should be on the menu page

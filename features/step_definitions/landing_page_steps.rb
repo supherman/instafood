@@ -16,8 +16,8 @@ Then /^I should see the twitter sign in modal$/ do
   page.should have_content('Accede para hacer tu pedido')
 end
 
-Given /^There are menu items$/ do
-  MenuItem.create name: 'foo'
+Given /^There are a menu item$/ do
+  MenuItem.create name: 'foo', price: 10
 end
 
 When /^I add a menu item to my order$/ do
